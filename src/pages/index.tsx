@@ -4,8 +4,9 @@ import * as React from "react"
 // App Imports
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import HomePage from "../containers/HomePage"
 
-const HomePage = () => {
+const IndexPage = () => {
   return (
     <Layout>
       <SEO
@@ -15,9 +16,9 @@ const HomePage = () => {
         keywords={[]}
         description=""
       />
-      <h1>asdasd</h1>
+      <HomePage />
     </Layout>
   )
 }
 
-export default HomePage
+export default IndexPage
