@@ -1,4 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    title: `Personal Blog`,
+    author: `Maria Pereyra`,
+    about: `Breakfast procuring no end happiness allowance assurance frank. Met simplicity nor difficulty unreserved who. Entreaties mr conviction dissimilar me
+    astonished estimating cultivated.`,
+    description: `A Gatsby Blog`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
