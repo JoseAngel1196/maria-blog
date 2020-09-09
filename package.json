@@ -13,10 +13,16 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "D": "^1.0.0",
     "gatsby": "^2.24.54",
+    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-typescript": "^2.4.19",
+    "gatsby-source-filesystem": "^2.3.28",
+    "gatsby-transformer-remark": "^2.8.34",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "tailwindcss": "^1.8.5"
   },
   "devDependencies": {
     "@types/node": "^14.6.4",
