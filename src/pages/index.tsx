@@ -1,7 +1,15 @@
+// Imports
 import * as React from "react"
 
-const Home = () => {
-  return <h1 className="text-center">Hello World</h1>
+// App Imports
+import Layout from "../components/layout"
+
+const HomePage = () => {
+  return (
+    <Layout>
+      <h1>asdasd</h1>
+    </Layout>
+  )
 }
 
-export default Home
+export default HomePage

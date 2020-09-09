@@ -28,5 +28,11 @@ module.exports = {
         purgeOnly: ["src/css/index.css"],
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        minify: false, // Breaks styles if not set to false
+      },
+    },
   ],
 }
