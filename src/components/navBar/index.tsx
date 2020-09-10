@@ -48,7 +48,7 @@ const socialIcons = [
 
 const NavBar: React.FC<NavBarProps> = () => {
   return (
-    <header className="fixed w-full bg-pink-400 flex justify-between items-center p-3">
+    <header className="w-full bg-pink-400 flex justify-between items-center p-5">
       <SocialIcons socialIcons={socialIcons} />
       <Menu items={MenuItems} />
     </header>

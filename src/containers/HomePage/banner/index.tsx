@@ -12,7 +12,7 @@ const Banner: React.FC<BannerProps> = () => {
         <h1 className="text-6xl font-bold">
           Maria <span className="text-pink-600">Pereyra</span>
         </h1>
-        <p className="text-black-tracking-widest">CREATIVE BLOGGER</p>
+        <p className="text-black tracking-widest text-2xl">CREATIVE BLOGGER</p>
       </div>
     </main>
   )

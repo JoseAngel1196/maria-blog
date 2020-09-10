@@ -26,6 +26,17 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: true,
+            },
+          },
+        ],
+      },
     },
     `gatsby-plugin-postcss`,
     {
@@ -41,10 +52,47 @@ module.exports = {
         minify: false, // Breaks styles if not set to false
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+    },
     {
       resolve: `gatsby-plugin-lodash`,
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`,
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Maria Pereyra - Personal Blog`,
+        short_name: `MariaPereyra`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/favicon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [`300`, `400`, `500`, `600`, `700`],
+          },
+          {
+            family: `Fira Sans`,
+            variants: [`100`, `300`, `400`, `500`, `600`, `700`],
+          },
+        ],
+      },
     },
   ],
 }

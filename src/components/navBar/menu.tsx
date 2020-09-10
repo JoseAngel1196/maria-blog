@@ -17,7 +17,7 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
     <ul className="flex justify-center items-center">
       {items.map((item, index) => (
         <li key={index}>
-          <Link to={item.url} className="cursor-pointer px-5">
+          <Link to={item.url} className="cursor-pointer px-10 font-medium">
             {item.label}
           </Link>
         </li>
