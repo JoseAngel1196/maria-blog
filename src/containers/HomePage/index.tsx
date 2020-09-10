@@ -2,12 +2,18 @@
 import React from "react"
 
 // App Imports
-import NavBar from "../../components/navBar"
+import NavBar from "../../components/Navbar"
+import Banner from "./banner"
 
 interface HomePageProps {}
 
 const HomePage: React.FC<HomePageProps> = () => {
-  return <NavBar />
+  return (
+    <React.Fragment>
+      <NavBar />
+      <Banner />
+    </React.Fragment>
+  )
 }
 
 export default HomePage

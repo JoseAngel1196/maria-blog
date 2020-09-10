@@ -41,5 +41,10 @@ module.exports = {
         minify: false, // Breaks styles if not set to false
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-lodash`,
+    },
   ],
 }

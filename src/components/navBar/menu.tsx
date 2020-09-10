@@ -14,13 +14,10 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ items }) => {
   return (
-    <ul className="w-1/4 flex justify-evenly items-center">
+    <ul className="flex justify-center items-center">
       {items.map((item, index) => (
         <li key={index}>
-          <Link
-            to={item.url}
-            className="font-bold text-sm text-gray-600 cursor-pointer"
-          >
+          <Link to={item.url} className="cursor-pointer px-5">
             {item.label}
           </Link>
         </li>
