@@ -3,12 +3,7 @@ import React from "react"
 
 // App Imports
 import Menu from "./menu"
-import facebook from "../../images/icon-facebook.svg"
-import twitter from "../../images/icon-twitter.svg"
-import pinterest from "../../images/icon-pinterest.svg"
-import youtube from "../../images/icon-youtube.svg"
-import instagram from "../../images/icon-instagram.svg"
-import SocialIcons from "./socialIcons"
+import Logo from "./logo"
 
 interface NavBarProps {}
 
@@ -18,40 +13,19 @@ const MenuItems = [
     url: "/",
   },
   {
-    label: "About",
-    url: "/about",
-  },
-]
-
-const socialIcons = [
-  {
-    alt: "Facebook",
-    src: facebook,
-  },
-  {
-    alt: "Twitter",
-    src: twitter,
-  },
-  {
-    alt: "Youtube",
-    src: youtube,
-  },
-  {
-    alt: "Pinterest",
-    src: pinterest,
-  },
-  {
-    alt: "Instagram",
-    src: instagram,
+    label: "Blog",
+    url: "/blog",
   },
 ]
 
 const NavBar: React.FC<NavBarProps> = () => {
   return (
-    <header className="w-full bg-pink-400 flex justify-between items-center p-5">
-      <SocialIcons socialIcons={socialIcons} />
-      <Menu items={MenuItems} />
-    </header>
+    <div className="bg-white border-b-2">
+      <div className="container mx-auto py-5 text-center lg:flex justify-between items-center">
+        <Logo />
+        <Menu items={MenuItems} />
+      </div>
+    </div>
   )
 }
 

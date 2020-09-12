@@ -14,15 +14,17 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ items }) => {
   return (
-    <ul className="flex justify-center items-center">
-      {items.map((item, index) => (
-        <li key={index}>
-          <Link to={item.url} className="cursor-pointer px-10 font-medium">
-            {item.label}
-          </Link>
-        </li>
+    <div className="space-x-8">
+      {items.map((item, i) => (
+        <Link
+          key={i}
+          to={item.url}
+          className="text-gray-600 hover:text-gray-900 text-base"
+        >
+          {item.label}
+        </Link>
       ))}
-    </ul>
+    </div>
   )
 }
 

@@ -14,11 +14,9 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <ResetCSS />
-      <div className="bg-white">
-        {children}
-        <Footer />
-      </div>
+      {/* <ResetCSS /> */}
+      {children}
+      <Footer />
     </ThemeProvider>
   )
 }

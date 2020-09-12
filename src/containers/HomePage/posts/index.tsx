@@ -1,9 +1,10 @@
 // Imports
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import PostCard from "../../../components/PostCard"
 
 // App Imports
+import PostCard from "../../../components/PostCard"
+import Button from "../../../components/Button"
 
 interface PostsProps {}
 
@@ -40,25 +41,34 @@ const Posts: React.FC<PostsProps> = () => {
   const Posts = Data.allMarkdownRemark.edges
 
   return (
-    <div className="container m-auto p-8">
-      <div className="flex flex-wrap justify-between">
-        {Posts.map(({ node }: any) => {
-          const title = node.frontmatter.title
-          return (
-            <PostCard
-              title={title}
-              image={
-                node.frontmatter.cover === null
-                  ? null
-                  : node.frontmatter.cover.childImageSharp.fluid
-              }
-              url={""}
-              description={node.excerpt}
-              date={node.frontmatter.date}
-              tags={node.frontmatter.tags}
-            />
-          )
-        })}
+    <div className="bg-gray-100">
+      <div className="container mx-auto p-10">
+        <div className="posts mb-3 lg:grid lg:grid-cols-2">
+          {Posts.map(({ node }: any) => {
+            const title = node.frontmatter.title
+            return (
+              <PostCard
+                title={title}
+                image={
+                  node.frontmatter.cover === null
+                    ? null
+                    : node.frontmatter.cover.childImageSharp.fluid
+                }
+                url={""}
+                description={node.excerpt}
+                date={node.frontmatter.date}
+                tags={node.frontmatter.tags}
+              />
+            )
+          })}
+        </div>
+        <div className="flex justify-center">
+          <Button
+            title="See more"
+            className="py-3 px-6 bg-black text-white hover:shadow-2xl transition duration-500"
+            type="submit"
+          />
+        </div>
       </div>
     </div>
   )
