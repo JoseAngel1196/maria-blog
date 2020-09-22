@@ -19,6 +19,9 @@ const Posts: React.FC<PostsProps> = () => {
         edges {
           node {
             excerpt(pruneLength: 200)
+            fields {
+              slug
+            }
             frontmatter {
               date
               description
@@ -43,18 +46,19 @@ const Posts: React.FC<PostsProps> = () => {
   return (
     <div className="bg-gray-100">
       <div className="container mx-auto p-10">
-        <div className="posts mb-3 lg:grid lg:grid-cols-2">
+        <div className="posts mb-20 lg:grid lg:grid-cols-2">
           {Posts.map(({ node }: any) => {
             const title = node.frontmatter.title
             return (
               <PostCard
+                key={node.fields.slug}
                 title={title}
                 image={
                   node.frontmatter.cover === null
                     ? null
                     : node.frontmatter.cover.childImageSharp.fluid
                 }
-                url={""}
+                url={node.fields.slug}
                 description={node.excerpt}
                 date={node.frontmatter.date}
                 tags={node.frontmatter.tags}

@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = () => {
     <div className="bg-white text-gray-600">
       <div className="container mx-auto p-8 text-center lg:flex justify-between items-center">
         <div className="mb-8 lg:mb-0">
-          <p className="text-sm">
+          <p className="text-medium">
             Copyright © 2020 
           </p>
         </div>

@@ -14,7 +14,7 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ items }) => {
   return (
-    <div className="space-x-8">
+    <div className="space-x-16">
       {items.map((item, i) => (
         <Link
           key={i}
