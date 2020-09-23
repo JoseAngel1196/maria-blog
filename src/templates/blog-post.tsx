@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 // App Imports
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import NavBar from "../components/Navbar"
+import Navbar from "../components/Navbar/Navbar"
 import PostDetails from "../components/PostDetails"
 import RelatedPostItem from "../components/RelatedPostItem"
 
@@ -24,7 +24,7 @@ const BlogPost: React.FC<BlogPost> = (props: any) => {
         meta={[]}
         keywords={[]}
       />
-      <NavBar />
+      <Navbar />
       <div className="bg-gray-100">
         <div className="container mx-auto p-12 flex space-x-4">
           <PostDetails

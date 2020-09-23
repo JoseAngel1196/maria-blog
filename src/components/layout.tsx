@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components"
 
 // App Imports
 import { theme } from "../theme/index"
-import Footer from "./Footer"
+import Footer from "./Footer/Footer"
 
 interface LayoutProps {
   children: React.ReactNode
