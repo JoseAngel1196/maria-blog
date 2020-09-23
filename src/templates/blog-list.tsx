@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 
 // App Imports
 import Layout from "../components/layout"
-import NavBar from "../components/Navbar"
+import Navbar from "../components/Navbar"
 import PostCard from "../components/PostCard"
 import SEO from "../components/seo"
 
@@ -23,7 +23,7 @@ const BlogList = (props: any) => {
   return (
     <Layout>
       <SEO title={`Page ${currentPage}`} lang="en" meta={[]} keywords={[]} />
-      <NavBar />
+      <Navbar />
       <div className="bg-gray-100">
         <div className="container mx-auto p-10">
           <div className="mb-20 lg:grid lg:grid-cols-2">
