@@ -5,7 +5,7 @@ import React from "react"
 import Menu from "./menu"
 import Logo from "./logo"
 
-interface NavBarProps {}
+interface NavbarProps {}
 
 const MenuItems = [
   {
@@ -18,7 +18,7 @@ const MenuItems = [
   },
 ]
 
-const NavBar: React.FC<NavBarProps> = () => {
+const Navbar: React.FC<NavbarProps> = () => {
   return (
     <div className="bg-white border-b-2">
       <div className="container mx-auto py-5 px-10 text-center lg:flex justify-between items-center">
@@ -29,4 +29,4 @@ const NavBar: React.FC<NavBarProps> = () => {
   )
 }
 
-export default NavBar
+export default Navbar
