@@ -10,25 +10,19 @@ interface FeaturePost {
   title: string
   url: string
   tags?: []
-  imageType?: "fixed" | "fluid"
 }
 
 const FeaturePost: React.FC<FeaturePost> = ({
   title,
   url,
   image,
-  imageType,
   tags,
 }) => {
   return (
-    <React.Fragment>
+    <div className="flex">
       {image == null ? null : (
         <Link to={url}>
-          {imageType === "fluid" ? (
-            <Img fluid={image} alt="post preview" />
-          ) : (
-            <Img fixed={image} alt="post preview" />
-          )}
+          <Img className="w-24" fluid={image} alt="post preview" />
         </Link>
       )}
       <div className="p-5">
@@ -43,7 +37,7 @@ const FeaturePost: React.FC<FeaturePost> = ({
           )}
         </div>
       </div>
-    </React.Fragment>
+    </div>
   )
 }
 

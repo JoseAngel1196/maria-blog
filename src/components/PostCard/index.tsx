@@ -26,7 +26,7 @@ const PostCard: React.FC<PostCardProps> = ({
   return (
     <div>
       {image === null ? null : (
-        <Link to={url}>
+        <Link to={`/${url}`}>
           <Img
             className="mb-3 rounded-lg shadow-2xl"
             fluid={image}

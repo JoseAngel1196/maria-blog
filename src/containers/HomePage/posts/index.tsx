@@ -1,6 +1,6 @@
 // Imports
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 // App Imports
 import PostCard from "../../../components/PostCard"
@@ -67,11 +67,13 @@ const Posts: React.FC<PostsProps> = () => {
           })}
         </div>
         <div className="flex justify-center">
-          <Button
-            title="See more"
-            className="py-3 px-6 bg-black text-white hover:shadow-2xl transition duration-500"
-            type="submit"
-          />
+          <Link to="page/1">
+            <Button
+              title="See more"
+              className="py-3 px-6 bg-black text-white hover:shadow-2xl transition duration-500"
+              type="submit"
+            />
+          </Link>
         </div>
       </div>
     </div>

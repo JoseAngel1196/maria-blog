@@ -6,6 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
+  const blogList = path.resolve(`./src/templates/blog-list.tsx`)
 
   return graphql(`
     {
@@ -48,9 +49,26 @@ exports.createPages = ({ graphql, actions }) => {
           tag: post.node.frontmatter.tags,
         },
       })
-
-      return null
     })
+
+    // Create blog post list pages
+    const postsPerPage = 6
+    const numPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/page/1` : `/page/${i + 1}`,
+        component: blogList,
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
+
+    return null
   })
 }
 

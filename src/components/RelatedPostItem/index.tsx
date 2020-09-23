@@ -22,7 +22,7 @@ const RelatedPostItem: React.FC<RelatedPostItem> = ({
   return (
     <div className="flex space-x-3">
       {image === null ? null : (
-        <Link to={url}>
+        <Link to={`/${url}`}>
           <Img className="w-32" fluid={image} alt="post preview" />
         </Link>
       )}
